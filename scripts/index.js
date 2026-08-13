@@ -116,6 +116,5 @@ number2 = ++number1; // number1을 1 증가해서 number2에 보내라
 console.log(number1, number2); // 대입 받는 애 뿐만 아니라 스스로도 같이 영향을 받음
 
 number2 = number1++;
-// 증감 연산자를 변수 뒤에 붙이면 
-// 기존 변수값(number1)을 대입(=)을 만나 number2로 먼저 보내고 ++로 number1을 나중에 증가시킨다.(후처리)
+// 증감 연산자를 변수 뒤에 붙이면 기존 변수값(number1)을 대입(=)을 만나 number2로 먼저 보내고 ++로 number1을 나중에 증가시킨다.(후처리)
 console.log(number1, number2); 
