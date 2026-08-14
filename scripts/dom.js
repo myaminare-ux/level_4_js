@@ -99,6 +99,7 @@ plusBtn.addEventListener('click', ()=>{
     console.log(typeof(countNumSpan.dataset.count)); // 문자로 인식, 계산 불가
     let currentNum = Number(countNumSpan.dataset.count); // 문자를 숫자로 변환해서 저장
     console.log(currentNum, typeof(currentNum)); // 숫자로 변경된 점 확인
+    // 심항 조건 연산자 활용 (수량이 20 이하일 때만 증가)
     currentNum < 20 ? (()=>{
         let plusTotal = ++currentNum; // 숫자로 변환한 변수를 1 증가해서 담은 증가 변수
         countNumSpan.dataset.count = plusTotal; // 증가된 변수를 해당 data 속성에 업데이트
