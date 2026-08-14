@@ -100,11 +100,11 @@ plusBtn.addEventListener('click', ()=>{
     let currentNum = Number(countNumSpan.dataset.count); // 문자를 숫자로 변환해서 저장
     console.log(currentNum, typeof(currentNum)); // 숫자로 변경된 점 확인
     // 심항 조건 연산자 활용 (수량이 20 이하일 때만 증가)
-    currentNum < 20 ? (()=>{
+    currentNum > 9 ? alert('최대 주문 수량입니다.') : (()=>{
         let plusTotal = ++currentNum; // 숫자로 변환한 변수를 1 증가해서 담은 증가 변수
         countNumSpan.dataset.count = plusTotal; // 증가된 변수를 해당 data 속성에 업데이트
         countNumSpan.textContent = plusTotal; // 증가된 변수를 사용자가 보는 화면에 출력
-    })() : alert('최대 주문 수량입니다.');
+    })();
 })
 
 // -를 클릭하면 span 값이 1씩 감소(익명함수 활용)
