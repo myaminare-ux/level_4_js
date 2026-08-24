@@ -41,7 +41,7 @@ const nonUserOrder = document.querySelector('#non-user-order');
 const nonUserPw = document.querySelector('#non-user-pw');
 const nonMemberLogin = document.querySelector('#non-member-login');
 
-console.log(userId,mamberLoginBtn, nonUserId, nonUserPw, nonMemberLogin);
+console.log(userId,mamberLoginBtn, nonUserId, nonUserPw, nonMemberLogin, nonUserOrder);
 
 mamberLoginBtn.addEventListener('click',()=>{
     btnClick(userId, '아이디')
