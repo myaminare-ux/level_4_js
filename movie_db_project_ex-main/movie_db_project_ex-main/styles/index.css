@@ -1,0 +1,10 @@
+img {width:100%;}
+header, main {max-width:480px; margin:0 auto;}
+header h1 {width:200px;}
+main h2 {margin:20px 0;}
+main .movie_wrap1 {display:flex; flex-flow:row wrap;}
+main .movie_wrap1 li {width:33.33%; height:100%;}
+main .movie_wrap2 {display:flex; flex-flow:row wrap; align-items:center;}
+main .movie_wrap2 h3 {font-weight:600;}
+main .movie_wrap2 p {font-size:0.7em; margin-bottom:4px;}
+main .movie_wrap2 li {width:25%; height:100%; display:flex; flex-flow:column nowrap;}
