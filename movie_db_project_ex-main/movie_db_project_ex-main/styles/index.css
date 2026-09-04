@@ -8,3 +8,37 @@ main .movie_wrap2 {display:flex; flex-flow:row wrap; align-items:center;}
 main .movie_wrap2 h3 {font-weight:600;}
 main .movie_wrap2 p {font-size:0.7em; margin-bottom:4px;}
 main .movie_wrap2 li {width:25%; height:100%; display:flex; flex-flow:column nowrap;}
+/* 2026 무비차트 */
+.chart {margin-bottom:30px;}
+.chart .chart_swiper {}
+.chart .chart_swiper .swiper-wrapper {}
+.chart .chart_swiper .swiper-wrapper .swiper-slide {
+    height:300px;
+    background-size:cover; background-position:center;
+    display:flex; flex-flow:column nowrap; justify-content:flex-end;
+}
+.chart .chart_swiper .swiper-wrapper .swiper-slide::after {
+    content:''; display:block; width:100%; height:40%;
+    position:absolute; left:0; bottom:0;
+    background:rgba(255, 255, 255, 0.8);
+}
+.chart .chart_swiper .swiper-wrapper .swiper-slide > * {
+    position:relative; z-index:100;
+}
+/* anime */
+.anime {margin-bottom:30px;}
+.anime .anime_swiper {}
+.anime .anime_swiper .swiper-wrapper {}
+.anime .anime_swiper .swiper-wrapper .swiper-slide {
+    height:200px;
+    background-size:cover; background-position:center;
+    display:flex; flex-flow:column nowrap; gap:10px;
+}
+.anime .anime_swiper .swiper-wrapper .swiper-slide > * {color:#fff; position:relative; z-index:100; opacity:0; padding:6px;}
+.anime .anime_swiper .swiper-wrapper .swiper-slide::after {
+    content:''; display:block; width:100%; height:100%;
+    position:absolute; left:0; top:0; opacity:0;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+.anime .anime_swiper .swiper-wrapper .swiper-slide:hover > * {opacity:1;}
+.anime .anime_swiper .swiper-wrapper .swiper-slide:hover::after {opacity:1;}

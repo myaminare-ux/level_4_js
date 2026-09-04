@@ -33,3 +33,48 @@ for(let i=0; i<10; i++){
     movieLi2.innerHTML += `<p>${movie2DB[i].director}</p>`;
     movieWrap2.appendChild(movieLi2);
 }
+
+// --------------------------------------------------- 26 / 09 / 04
+// 무비차트 + swiper
+// swiper-slide를 생성해서 swiper-wrapper에 붙여넣기
+// 스와이퍼, 스와이퍼 랩퍼를 하나로 변수로 잡을지, 각각 하나씩 잡을지 생각해야 함
+// swiper 플러그인 함수 연결은 swiper에게 최종 연결해야 함
+const chart_swiper = document.querySelector('.chart_swiper'); // 스와이퍼의 두번쨰 클래스로 같이 잡은 경우
+
+// 플러그인 연결
+const chart_swiper_func = new Swiper(chart_swiper,{
+    slidesPerView:2,
+    spaceBetween:10,
+}); // 당장 하면 오류 걸리므로 먼저 주석 걸기 = 최종 연결되는 부분
+
+for(let i=0; i<5; i++){
+    const chart_slide = document.createElement('div'); // 생성
+    chart_slide.classList.add('swiper-slide'); // 새로 만든 태그에 클래스 생성 시 클래스 리스트로 붙여야 함 = 클래스 연결
+
+    chart_slide.innerHTML = `<p class="num">${movieDB[i].id}위</p>`;
+    chart_slide.innerHTML += `<h3>${movieDB[i].title}</h3>`;
+    chart_slide.innerHTML += `<p class="rating">평점 ${movieDB[i].rating}</p>`;
+    chart_slide.innerHTML += `<p class="story">${movieDB[i].summary}</p>`;
+    chart_slide.style.backgroundImage = `url(${movieDB[i].poster})`; // 이미지를 슬라이드의 백그라운드로 넣기 위해 스타일.백그라운드이미지 = 경로; 작성
+
+    chart_swiper.children[0].appendChild(chart_slide); // 스와이퍼의 0번째 자식(스와이퍼 랩퍼)으로 슬라이드를 붙여넣기
+}
+
+// Q2-1. 애니메이션 + swiper
+const anime_swiper = document.querySelector('.anime_swiper');
+
+for(let i=0; i<6; i++){
+    const anime_slide = document.createElement('div');
+    anime_slide.classList.add('swiper-slide');
+    anime_slide.innerHTML = `<p class="num">${movie2DB[i].id}</p>`;
+    anime_slide.innerHTML += `<h3>${movie2DB[i].title}</h3>`;
+    anime_slide.innerHTML += `<p class="rating">${movie2DB[i].rating}</p>`;
+    anime_slide.innerHTML += `<p class="genre">${movie2DB[i].genre}</p>`;
+    anime_slide.style.backgroundImage = `url(${movie2DB[i].poster})`;
+    anime_swiper.children[0].appendChild(anime_slide);
+}
+
+const anime_swiper_func = new Swiper(anime_swiper,{
+    slidesPerView:3,
+    spaceBetween:10,
+});
