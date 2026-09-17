@@ -262,6 +262,25 @@
             },
         })
 
+        // 타이머 함수 기초 연습
+        // 1초 지나고 한 번 실행하고 끝
+        const timer1 = setTimeout(()=>{
+            console.log('실행문구');
+            // alert('이 웹사이트는 포토폴리오용입니다.')
+        },1000) // 1초 뒤에 {}를 ()번 실행하겠다
+        
+        // 1.5초 지날 때마다 무한 반복 실행(clearInterval이 있어야 종료 가능)
+        const timer2 = setInterval(()=>{
+            console.log('실행문구');
+        },1500)
+        
+        // 조건문으로는 타이머를 멈출 수 없음 = 오로지 타이머 관련 함수만 가능
+        // 5초 뒤에 타이머가 정지됨
+        setTimeout(()=>{
+            console.log('반복 정지');
+            clearInterval(timer2);
+        },5000)
+
         // 웹브라우저 스크롤 복원 기능 리셋하고 위에서 시작하기
         if ('scrollRestoration' in history) { history.scrollRestoration = 'manual';}
         window.addEventListener('load', () => {
