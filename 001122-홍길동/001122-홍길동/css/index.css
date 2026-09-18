@@ -35,7 +35,7 @@ header nav > ul > li > ul > li {}
 header nav > ul > li > ul > li > a {line-height:40px;}
 main {}
 main .hero {width:1200px; height:300px; overflow:hidden;}
-main .hero .hero_wrapper {display:flex; flex-flow:column nowrap; width:max-content;}
+main .hero .hero_wrapper {position:relative; display:flex; flex-flow:column nowrap; width:max-content;}
 main .hero .hero_slide {width:1200px; height:300px; overflow:hidden;}
 main .hero .hero_slide a {}
 main .hero .hero_slide img {}
