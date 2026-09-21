@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강아지 패션 > 몽셸 패딩 하네스 올인원 | 오늘의 집</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./product_list.css">
+    <script src="./list.js" defer></script>
+</head>
+
+<body>
+    <!-- 다크모드 -->
+    <!-- https://cdn-icons-png.flaticon.com/128/17406/17406104.png -->
+    <!-- 라이트모드 -->
+    <!-- https://cdn-icons-png.flaticon.com/128/439/439842.png -->
+    <button type="button" class="cta" id="view_mode_btn" title="라이트/다크모드"><img src="
+        https://cdn-icons-png.flaticon.com/128/439/439842.png" alt="라이트모드"></button>
+    <main>
+        <div class="item_detail flex-r-start">
+            <!-- (좌) 상품 작은 이미지와 큰 이미지 보기 영역 -->
+            <div class="left_thum flex-r-start">
+                <div class="small_thum flex-col">
+                    <p class="small"><img src="./dog_images/big1.jpg" alt=""></p>
+                    <p class="small"><img src="./dog_images/big2.jpg" alt=""></p>
+                </div>
+                <div class="big_thum"><img src="./dog_images/big1.jpg" alt=""></div>
+            </div>
+            <!-- (우) 상품 주문정보 표시 영역 -->
+            <div class="right_container flex-c-start">
+                <div class="info">
+                    <p class="brand">울리</p>
+                    <h1>몽셸 패딩 하네스 올인원 7size 5colors</h1>
+                    <p>28% <del>55,900원</del></p>
+                    <p class="price"><em>39,900</em>원</p>
+                </div>
+                <form action="#" method="get" id="order_frm" class="flex-c-start">
+                    <!-- 상품 옵션 선택 영역(색상) -->
+                    <div class="color_select">
+                        <span>색상</span>
+                        <button type="button" class="pink color_btn active"></button>
+                        <button type="button" class="blue color_btn"></button>
+                    </div>
+                    <!-- 상품 옵션 선택 영역(사이즈) -->
+                    <div class="size_select">
+                        <span>사이즈</span>
+                        <button type="button" class="s size_btn">S</button>
+                        <button type="button" class="m size_btn active">M</button>
+                        <button type="button" class="l size_btn">L</button>
+                    </div>
+                    <!-- (위) 상품옵션을 모두 선택했을 때 선택한 옵션 출력 영역 -->
+                    <span class="opt_result flex-c-start">
+                        <span><!-- 선택 색상/사이즈 옵션에 대한 수량 증감 -->
+                            <button class="minus">-</button>
+                            <input type="text" class="num" data-num="1" value="1" readonly>
+                            <button class="plus">+</button>
+                        </span><!-- 선택 수량에 대한 가격 -->
+                        <span class="price" data-price=""><em>29,900</em>원</span>
+                    </span>
+                    <!-- 최종주문버튼 : 선택옵션 미출력 시 비활성화 / 선택옵션 출력 시 활성화 -->
+                    <div class="add_btn">
+                        <button type="button" id="cart_order">장바구니</button>
+                        <button type="button" id="buy_order">바로결제</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="qa">
+            <h1>자주하는 질문</h1>
+            <div class="question active">Q. 배송은 얼마나 걸리나요? <span class="arrow"><img src="./dog_images/down.png" alt=""></span></div>
+            <div class="answer active">당일 4시전 결제 시 2일 소요됩니다.</div>
+            <div class="question">Q. 반품은 어떻게 하나요? <span class="arrow"><img src="./dog_images/down.png" alt=""></span></div>
+            <div class="answer">상품에 따라 정책이 다르니 판매자에게 문의해주세요.</div>
+            <div class="question">Q. 품절상품은 언제 입고 되나요? <span class="arrow"><img src="./dog_images/down.png" alt=""></span></div>
+            <div class="answer">상품에 따라 입고 기준이 다르니 판매자에게 문의해주세요.</div>
+        </div>
+    </main>
+</body>
+
+</html>

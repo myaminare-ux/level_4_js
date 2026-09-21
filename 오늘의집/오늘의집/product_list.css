@@ -1,0 +1,170 @@
+/* 변수 var */
+:root {
+    --color-primary: #00A1FF;
+    --color-gray: rgb(245, 245, 245);
+    --color-disable: #aaa;
+    --color-light-gray: #ddd;
+}
+
+/* var class */
+.flex-row {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+}
+.flex-col {
+    display: flex; flex-flow: column nowrap;
+    justify-content: center; align-items: center;
+}
+.flex-r-start {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start; align-items: flex-start;
+}
+.flex-c-start {
+    display: flex; flex-flow: column nowrap;
+    justify-content: flex-start; align-items: flex-start;
+}
+.flex-r-between {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+}
+.flex-c-between {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between; align-items: center;
+}
+
+/* ------------------------------------------------------design */
+/* cta */
+.cta {
+    position:fixed; right:20px; bottom:20px;
+    width:50px; background:none;
+    border-radius:50%; overflow:hidden;
+    border:1px solid #eee; padding:5px;
+}
+#view_mode_btn {}
+#view_mode_btn img {width:100%;}
+/* main-darkmode */
+main.darkmode {background-color:#222;}
+main.darkmode * {color:#fff;}
+/* main-lightmode */
+main {
+    max-width: 600px; min-width:320px;
+    margin: 0 auto; padding:0 0 100px;
+}
+main .item_detail {
+    gap: 20px;
+    flex-flow:column nowrap;
+    padding: 30px 20px;
+}
+main .item_detail > * {width:100%;}
+/* -------------------------------(좌) 이미지 미리보기 영역 */
+main .item_detail .left_thum {
+    gap: 10px;
+    width:100%;
+}
+main .item_detail .left_thum .small_thum {gap: 6px;}
+main .item_detail .left_thum .small_thum .small {cursor: pointer; width:60px;}
+main .item_detail .left_thum .small_thum .small img {width: 100%;}
+main .item_detail .left_thum .big_thum {
+    cursor: pointer; overflow: hidden;
+}
+main .item_detail .left_thum .big_thum img {width: 100%;}
+/* -------------------------------(우) 상품 디테일 표시 영역 + 주문영역 */
+main .item_detail .right_container {
+    gap: 5px;
+    align-items: center;
+}
+main .item_detail .right_container > * {width:95%;}
+main .item_detail .right_container .info {margin:0 0 20px;}
+main .item_detail .right_container .brand {
+    font-size: 0.9rem;
+    color: var(--color-disable)
+}
+main .item_detail .right_container h1 {font-size: 1.2rem;}
+main .item_detail .right_container h1+p {margin-top: 10px;}
+main .item_detail .right_container>p del {
+    color: var(--color-disable);
+    font-size: 0.875rem;
+}
+
+main .item_detail .right_container .price {font-size:1.2rem;}
+main .item_detail .right_container>p em {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary)
+}
+main .item_detail .right_container #order_frm {}
+/* ----------------------------------색상+사이즈 */
+main .item_detail .right_container #order_frm .color_select,
+main .item_detail .right_container #order_frm .size_select {
+    display:flex; gap:4px; align-items: center;
+    margin:0 0 6px;
+}
+main .item_detail .right_container #order_frm .color_select button,
+main .item_detail .right_container #order_frm .size_select button {
+    width:28px; height:28px; border-radius:4px; background:#eee;
+    border:1px solid #ccc;
+}
+main .item_detail .right_container #order_frm .color_select span,
+main .item_detail .right_container #order_frm .size_select span {width:60px;}
+main .item_detail .right_container #order_frm .color_select {}
+main .item_detail .right_container #order_frm .color_select .pink {background:#d082c5;}
+main .item_detail .right_container #order_frm .color_select .blue {background:#719afa;}
+main .item_detail .right_container #order_frm .size_select {}
+main .item_detail .right_container #order_frm .size_select .s {}
+main .item_detail .right_container #order_frm .size_select .m {}
+main .item_detail .right_container #order_frm .size_select .l {}
+main .item_detail .right_container #order_frm div .active {border:3px solid #222; background:#fff;}
+/* ----------------------------------(위)주문 영역 */
+main .item_detail .right_container #order_frm .opt_result {
+    gap: 10px;
+    position: relative;
+    background: #f5f5f5;
+    padding: 15px; margin:10px 0 0;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+main .item_detail .right_container #order_frm .opt_result span {background: #fff;}
+main .item_detail .right_container #order_frm .opt_result span .minus,/* 증감그룹 */
+main .item_detail .right_container #order_frm .opt_result span .plus {
+    width: 20px;
+    height: 20px;
+    background: none;
+}
+main .item_detail .right_container #order_frm .opt_result span input[data-num] {/* 증감 수량 표시 */
+    width: 40px;
+    text-align: center;
+    outline: none;
+}
+main .item_detail .right_container #order_frm .opt_result span[data-price] {/* 선택주문가 */
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+main .item_detail .right_container #order_frm .opt_result span[data-price] em {font-weight: 700;font-size: 1.2rem;}/* 가격표시 */
+main .item_detail .right_container #order_frm .add_btn {display:flex; width:100%; gap:4px;}
+main .item_detail .right_container #order_frm .add_btn button[id*=order] {
+    background: var(--color-disable);
+    flex:1;
+    color: #fff;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+main .item_detail .right_container #order_frm .add_btn #cart_order {background:#3d74ff;}
+main .item_detail .right_container #order_frm .add_btn #buy_order {background:#fd2727;}
+main .qa {width:90%; margin:30px auto;}
+main .qa h1 {font-weight:600; text-align: center;}
+main .qa h1 ~ * {
+    border-bottom:1px solid #ccc; 
+    padding:15px 12px;
+}
+main .qa .question {position:relative;}
+main .qa .question .arrow {
+    width:24px; display:block;
+    position:absolute; right:5px; top:50%; transform:translateY(-50%);
+}
+main .qa .question .arrow img {width:100%;}
+main .qa .question.active .arrow img {transform:scaleY(-1);}
+main .qa .answer {display:none; background:#f5f5f5;}
+main .qa .answer.active {display:block;}
